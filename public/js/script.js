@@ -174,8 +174,8 @@ function weatherApp() {
         humidity : humidity + '%', 
         dew_point : dew_point + '%', 
         uvi_index : uvi, 
-        visibility : helpers.roundUnits(visibility / 1609.344) + ' miles', 
-        wind_speed : helpers.roundUnits(wind_speed / 1609.344) + ' miles/hr',
+        visibility : helpers.roundUnits(visibility) + ' metres', 
+        wind_speed : helpers.roundUnits(wind_speed) + ' metre/sec',
         wind_deg : wind_deg + '&deg;'
       };
       
