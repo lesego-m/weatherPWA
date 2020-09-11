@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather App</title>
+    <meta name="description" content="A Weather App with PWA enhancement" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
+    <link
+      rel="manifest"
+      href="manifest.webmanifest"
+      crossorigin="use-credentials"
+    />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="./css/styles.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.gstatic.com">
+    <link rel="preconnect" href="https://openweathermap.org">
+    <link rel="preconnect" href="https://api.openweathermap.org">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <div id="output">
+      <header class="page_header">
+        <h1 class="page_header-title">Smash It Events</h1>
+        <h2 class="page_header-date"><time id="today" datetime="2020">Today's date</time></h2>
+        <form action="" method="get" class="search__container">
+          <div class="search__box">
+            <label for="search" class="search__box-label">Enter city name</label>
+            <input type="text" name="search" id="search" class="search__box-input" placeholder="eg: Cape Town" required>
+            <p class="error__message error__message--hidden">Network Issue</p>
+          </div>
+          <div class="search__box">
+            <input id="searchBtn" type="submit" class="search__box-submit" value="Search City">
+          </div>
+        </form>
+      </header>
+      <main class="wrapper">
+        <section class="current_day">
+          <p>No Loaded Weather Data</p>
+        </section>
+        <section class="current_day_stats">
+          <p>No Loaded Weather Data</p>
+        </section>
+        <aside class="daily_list_wrapper">
+          <h3 class="daily_list_wrapper__title">Search History</h3>
+          <ul id="search_history" class="daily_list">
+            <li class="daily_weather">No Data</li>
+          </ul>
+        </aside>
+      </main>
+    </div>
+    <script src="./js/script.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCSFaQCEKBk2i31spWBjRI49LBlxSH6ioM",
+        authDomain: "weatherpwa-6eaf5.firebaseapp.com",
+        databaseURL: "https://weatherpwa-6eaf5.firebaseio.com",
+        projectId: "weatherpwa-6eaf5",
+        storageBucket: "weatherpwa-6eaf5.appspot.com",
+        messagingSenderId: "1005887303589",
+        appId: "1:1005887303589:web:bff43b0ff54955a483024c",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </body>
+</html>
